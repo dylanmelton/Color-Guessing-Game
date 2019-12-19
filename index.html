@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1 class='score color' ></h1>
+    <ul class="option-box">
+        <li><strong>gold</li>
+        <li><strong>purple</li>
+        <li><strong>black</li>
+        <li><strong>teal</li>
+        <li><strong>aqua</li>
+        <li><strong>blue</li>
+        <li><strong>red</li>
+    </ul>
+    
+        
+
+    <div id="some_div"></div>   
+    
+    <div class="center-button">
+        <button>Start Game</button>
+        
+        
+        
+        <script type="text/javascript">
+            // Timer-----------
+            var timeLeft = 30;
+            var elem = document.getElementById('some_div');
+            var timerId = setInterval(countdown, 1000);
+
+            function countdown() {
+                if (timeLeft == -1) {
+                    clearTimeout(timerId);
+                    doSomething();
+                } else {
+                    elem.innerHTML = timeLeft + ' seconds remaining';
+                    timeLeft--;
+                }
+            }
+            function doSomething() {
+                console.log("good job");
+            }
+             
+            //Timer----------
+            
+            
+            var score = 0;
+            var color = ["gold", "purple", "black", "teal", "aqua", "blue", "red"];
+            
+            var i = 0;
+            document.querySelector("button").addEventListener("click", function(){
+                i = ++i % color.length;
+                var randomColor = color[Math.floor(Math.random() * color.length)];
+                
+                var my_score = document.querySelector(".score")
+                
+            document.querySelector("body").style.background = randomColor 
+            var userGuess = window.prompt("What is your guess?");
+            
+            if (userGuess == randomColor) {
+                score++
+                my_score.innerHTML = `Score: ${score}`
+            }
+            //document.querySelector('button').classList.add('hidden')
+            })
+        </script>
+    </div>
+</body>
+</html>

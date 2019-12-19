@@ -1,0 +1,57 @@
+body {
+    background-color: white
+}
+.center-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
+    height: 50px;
+
+}
+button {
+    font-size: 30px;
+    color: white;
+    background-color: black;
+    border: 0;
+
+}
+h1 {
+    display: flex;
+    justify-content: center;
+}
+.option-box {
+    border: solid white 2px;
+    width: 90px;
+    height: 150px;
+    padding-top: 10px;
+    color: white;
+    background-color: black;
+    
+}
+.position-guess-button {
+    display: flex;
+    justify-content: center;
+}
+.guess-box {
+    border: solid black 3px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+label {
+    padding-right: 7px;
+}
+input, textarea {
+    background-color : mintcream;
+  }
+.color {
+    color: white;
+}
+.hidden {
+    display: none;
+}
+h3 {
+    position: relative;
+    top: 10rem;
+}
